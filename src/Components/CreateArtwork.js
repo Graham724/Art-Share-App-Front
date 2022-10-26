@@ -70,6 +70,7 @@ return (
         <Form.Label>Artist</Form.Label>
         <Form.Control 
         type="text" 
+        required="required" 
         onChange={(e) => setArtist(e.target.value)}
         value={artist}
         placeholder="Enter Artist's Name" />
@@ -87,6 +88,7 @@ return (
         <Form.Label>Size</Form.Label>
         <Form.Control 
         type="text" 
+        required="required" 
         onChange={(e) => setSize(e.target.value)}
         value={size}
         placeholder="Enter Estimated Size of Artwork" />

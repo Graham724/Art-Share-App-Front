@@ -40,10 +40,10 @@ const display = artworks && artworks.map((eachArtwork) => {
                <Card.Img style={{height: '300px'}} alt='Art' variant='bottom' src={eachArtwork.imgURL} />
                <ListGroup className="list-group-flush">
                     <ListGroup.Item><span style={{fontWeight: 'bold'}}>Artist: </span>{eachArtwork.artist}</ListGroup.Item>
-                    <ListGroup.Item><span style={{fontWeight: 'bold'}}>Size: </span>{eachArtwork.size} minutes</ListGroup.Item>
+                    <ListGroup.Item><span style={{fontWeight: 'bold'}}>Size: </span>{eachArtwork.size}</ListGroup.Item>
                </ListGroup>
                <Card.Footer>
-                    <Link to={`/getRecipe/${eachArtwork._id}`}>
+                    <Link to={`/getArtwork/${eachArtwork._id}`}>
                          <Button variant="primary">Go To Artwork</Button>
                     </Link>
                </Card.Footer>
@@ -52,4 +52,18 @@ const display = artworks && artworks.map((eachArtwork) => {
      </Col>
     )
 })
+
+return (
+     <div>
+          <h1>Artworks Posted!</h1>
+          <Container>
+             <Row>
+                  {display}
+             </Row>
+        </Container>
+             <Link to='/createArtwork'>   
+                  <Button className='create-buttons' variant="success" style={{float: 'right', marginRight: '-5px', marginTop: '50px'}}>Create Art Post</Button>
+             </Link>
+     </div>
+    ) 
 }
